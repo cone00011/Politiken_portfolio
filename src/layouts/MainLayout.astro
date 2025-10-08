@@ -10,10 +10,12 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="robots" content="noindex, nofollow" />
 		<title>{Astro.props.title}</title>
 		<script defer src="https://unpkg.com/tailwindcss-intersect@2.x.x/dist/observer.min.js"></script>
 	</head>
-	<body>
+	<body
+		class="bg-[url('/fun/dobberman_tekst.png')] bg-no-repeat bg-[length:650px_auto] bg-[position:80%_bottom] bg-fixed">
 
 		<header>
 			<Header></Header>
@@ -27,5 +29,26 @@ const { title } = Astro.props;
 			<Footer></Footer>
 		</footer>
 			
+		<style>
+			/* Fjern standardcursor på summary og hele siden */
+			body, summary {
+			  cursor: url("/black_star.png") 12 12, auto;
+			}
+		  
+			/* Hover cursor på summary */
+			summary:hover {
+			  cursor: url("/black_star_hover.png") 12 12, auto;
+			  font-style: italic; /* beholder din hover-effekt */
+			}
+		  
+			/* Fjerner browserens default marker/trekant på summary */
+			summary::-webkit-details-marker {
+			  display: none;
+			}
+		  </style>
+		  
+		  
+
 	</body>
 </html>
+

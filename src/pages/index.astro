@@ -1,15 +1,123 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 ---
-<MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+
+<style>
+  details summary {
+    list-style: none;
+  }
+
+  /* Fjerner den lille trekant i alle browsere */
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  
+</style>
+
+<MainLayout title="Portfolio fra Politiken">
+  <article class="space-y-6 px-4">
+    <h1 class="text-7xl mb-5 mt-10 font-[Helvetica]">PORTFOLIO FRA POLITIKEN</h1>
+
+    <div class="text-right text-xl mb-15 mt-20 font-[Helvetica]">
+      <h2>her kan du se alle mine værker fra min praktikperiode hos politiken</h2>
+      <h2>xoxo connor selkirk neillands</h2> 
+    </div>
+
+    <!-- Sektion 1 -->
+    <details>
+      <summary class="cursor-pointer text-5xl border-b border-black py-2 font-[Helvetica] hover:italic">
+        MOTION GRAPHICS
+      </summary>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 py-4">
+        <video src="/motion/Madpakke_final_version.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+        <video src="/motion/Ordblindhed.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+        <video src="/motion/usa&gronland_1.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+        <video src="/motion/metro.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+      </div>
+    </details>
+
+    <!-- Sektion 3 -->
+    <details>
+      <summary class="cursor-pointer text-5xl border-b border-black py-2 hover:italic">
+        GRAPHICS
+      </summary>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 py-4">
+        <img src="/graphics/Bygning3.png" alt="Bygning" class="w-full h-full object-cover" />
+        <img src="/graphics/ingerrrrr.png" alt="Inger" class="w-full h-full object-cover" />
+        <img src="/graphics/NOA_haab_folketinget.jpg" alt="Folketinget" class="w-full h-full object-cover" />
+        <img src="/graphics/NOA_socialdemokratiet.png" alt="Socialdemokratiet" class="w-full h-full object-cover" />
+      </div>
+    </details>
+
+    <!-- SCROLLY TELLING -->
+    <details>
+      <summary class="cursor-pointer text-5xl border-b border-black py-2 hover:italic">
+        SCROLLY TELLING
+      </summary>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 py-4">
+        <video src="/scrolly/1.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+        <video src="/scrolly/4.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+       
+        <video src="/scrolly/3.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+        <video src="/scrolly/2.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+        <img src="/scrolly/6.png" alt="Socialdemokratiet" class="w-full h-full object-cover" />
+        <video src="/scrolly/5.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+        
+      
+      
+      </div>
+    </details>
+
+    <!-- ADHD -->
+    <details>
+      <summary class="cursor-pointer text-5xl border-b border-black py-2 hover:italic">
+        ADHD
+      </summary>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 py-4">
+        <video src="/adhd/1.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+        <video src="/adhd/2.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+        <video src="/adhd/3.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+        <video src="/adhd/4.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+        <video src="/adhd/5.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+        <video src="/adhd/6.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+        <video src="/adhd/7.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+        <video src="/adhd/8.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+        <video src="/adhd/9.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+     
+      </div>
+    </details>
+
+    <!-- FUN -->
+    <details>
+      <summary class="cursor-pointer text-5xl border-b border-black py-2 hover:italic">
+        FUN
+      </summary>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 py-4">
+        <img src="/fun/FOIL.jpg" alt="FOIL" class="w-full h-full object-cover" />
+        <video src="/fun/liquid_baggrund.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+        <img src="/fun/PIERCING.png" alt="PIERCING" class="w-full h-full object-cover" />
+        <img src="/fun/PAPIR.jpg" alt="PAPIR" class="w-full h-full object-cover" />
+        <img src="/fun/kate_bush.png" alt="Kate Bush" class="w-full h-full object-cover" />
+      </div>
+    </details>
+  </article>
 </MainLayout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const detailsList = document.querySelectorAll("details");
+
+    detailsList.forEach((details) => {
+      details.addEventListener("toggle", () => {
+        if (details.open) {
+          detailsList.forEach((other) => {
+            if (other !== details) other.open = false;
+          });
+        }
+      });
+    });
+  });
+</script>
