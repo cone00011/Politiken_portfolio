@@ -36,10 +36,10 @@ const { title } = Astro.props;
 			}
 		  
 			/* Hover cursor på summary */
-			summary:hover {
-			  cursor: url("/black_star_hover.png") 12 12, auto;
-			  font-style: italic; /* beholder din hover-effekt */
-			}
+			.motion-hover:hover {
+  cursor: url("/black_star_hover.png") 12 12, auto;
+  /* font-style: italic; behøver vi ikke, fordi Tailwind's hover:italic stadig virker */
+}
 		  
 			/* Fjerner browserens default marker/trekant på summary */
 			summary::-webkit-details-marker {
